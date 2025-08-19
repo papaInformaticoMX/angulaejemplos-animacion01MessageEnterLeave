@@ -5,12 +5,16 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "buildpages": "ng build --configuration production --base-href='/angulaejemplos-animacion01MessageEnterLeave/'",
+    "github-deploy": "npx angular-cli-ghpages --dir=dist/slider2/browser --no-silent",
+
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:slider2": "node dist/slider2/server/server.mjs"
   },
   "private": true,
   "dependencies": {
+    "@angular/animations": "^20.1.6",
     "@angular/common": "^20.0.0",
     "@angular/compiler": "^20.0.0",
     "@angular/core": "^20.0.0",
@@ -32,6 +36,7 @@
     "@types/express": "^5.0.1",
     "@types/jasmine": "~5.1.0",
     "@types/node": "^20.17.19",
+    "angular-cli-ghpages": "^2.0.3",
     "jasmine-core": "~5.7.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.2.0",

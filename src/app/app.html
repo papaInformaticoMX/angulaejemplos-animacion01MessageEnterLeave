@@ -1,9 +1,16 @@
-<h1>HOLA</h1>
- <h1>Ejemplo de Animación `*ngIf`</h1>
-    <button (click)="toggleMessage()">
-      {{ showMessage ? 'Ocultar Mensaje' : 'Mostrar Mensaje' }}
-    </button>
-    
-    <app-message *ngIf="showMessage"></app-message>
-<router-outlet />
+<button (click)="toggleMessage()">
+  {{ showMessage ? 'Ocultar Mensaje' : 'Mostrar Mensaje' }}
+</button>
+@if (showMessage){
+  <app-message [@fadeAnimation]></app-message>
+}
 
+<h1>Ejemplo de Keyframes</h1>
+    <button (click)="toggleBall()">
+      {{ showBall ? 'Ocultar Pelota' : 'Mostrar Pelota' }}
+    </button>
+    <div style="height: 200px; border: 1px solid #ccc; margin-top: 20px;">
+      @if (showBall){
+        <app-bouncing-ball></app-bouncing-ball>
+      }
+    </div>
